@@ -1,8 +1,8 @@
 /* Base styles */
 :root {
-  --primary-color: #4f46e5;
+  --primary-color: #3355ff;
   --text-color: #333;
-  --background-color: #f9fafb;
+  --background-color: cornsilk;
   --card-background: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.05);
   --border-radius: 12px;
@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -33,12 +34,21 @@ header h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--primary-color);
+  color: #1d1d1d;
 }
 
 header p {
   font-size: 1.1rem;
   color: #666;
+}
+
+.hide {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* Main content */
@@ -71,8 +81,15 @@ main {
 
 .game-image {
   width: 100%;
-  height: 180px;
+  /* height: 180px; */
+  height: auto;
   object-fit: cover;
+}
+
+.game-image-blank {
+  width: 100%;
+  height: 300px;
+  background-color: lightgray;
 }
 
 .game-content {
@@ -96,6 +113,14 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  gap: 16px;
+}
+
+.game-categories {
+  display: flex;
+  gap: 8px;
+  width: -webkit-fill-available;
+  flex-wrap: wrap;
 }
 
 .game-category {
@@ -107,6 +132,7 @@ main {
 }
 
 .play-button {
+  white-space: nowrap;
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -118,7 +144,7 @@ main {
 }
 
 .play-button:hover {
-  background-color: #4338ca;
+  background-color: #0c2bc6;
 }
 
 /* Footer */
